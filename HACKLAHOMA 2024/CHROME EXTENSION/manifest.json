@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3 ,
+    "name": "Retro Clock",
+    "version": "1.0",
+    "description": "A retro-futuristic clock for your Chrome browser.",
+    "permissions": ["activeTab", "tabs"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "clock.png"
+      }
+    },
+    "icons": {
+      "16": "clock.png"
+    },
+    
+
+
+    
+    "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["popup.js"]
+      }
+  ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+  

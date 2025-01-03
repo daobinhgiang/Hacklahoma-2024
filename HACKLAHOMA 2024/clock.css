@@ -1,0 +1,92 @@
+@font-face {
+    font-family: '8bit';
+    src: url(font/8bit.ttf);
+}
+@font-face {
+    font-family: 'retro-font';
+    src: url(font/retro_font.TTF);
+}
+
+h1 {
+    font-family: '8bit';
+    font-size: 100px;
+    color:lightpink;
+    text-align: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'retro-font';
+    }
+    
+    body {
+        height: 100vh;
+        background-image: url('background.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .clock {
+        width: auto;
+        height: 6em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 80%;
+        left: 50%;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .clock div,
+    .clock span {
+        display: block; /* Change display to block */
+        float: left; /* Float elements next to each other */
+    }
+    
+    .clock div {
+        background-color: #ffffff;
+        width: 3.2em;
+        height: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        color: #150c41;
+        border-radius: 0.4em;
+        box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.05em;
+        margin-right: 5px;
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center vertically */
+        justify-content: center;
+    }
+    
+    .clock span {
+        font-weight: 800;
+        font-size: 2.5em;
+        color: #ffffff;
+        line-height: 3.2em; /* Adjust line-height for centering vertically */
+    }
+    
+    .clock-image {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 500px;
+    }
+        
+    .clock-image img {
+        width: 100%;
+        height: auto;
+        animation: moveUpDown 1s ease-in-out infinite alternate;
+    }
+    @keyframes moveUpDown {
+        from {
+            transform: translateY(0); /* Starting position */
+        }
+        to {
+            transform: translateY(-20px); /* Ending position */
+        }
+    }

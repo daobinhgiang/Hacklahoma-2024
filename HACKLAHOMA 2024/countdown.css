@@ -1,0 +1,75 @@
+@font-face {
+    font-family: '8bit';
+    src: url(font/8bit.ttf);
+}
+@font-face {
+    font-family: 'retro-font';
+    src: url(font/retro_font.TTF);
+}
+
+.countdown-input {
+    width: auto;
+    height: 6em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 50%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdown-input input {
+    width: 3.2em; /* Match width of clock boxes */
+    height: 100%; /* Match height of clock boxes */
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 2.5em; /* Match font size of clock boxes */
+    color: #150c41; /* Match font color of clock boxes */
+    background-color: #ffffff; /* Match background color of clock boxes */
+    border-radius: 0.4em; /* Match border radius of clock boxes */
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3); /* Match box shadow of clock boxes */
+    border: none; /* Remove border */
+    text-align: center;
+}
+
+.countdown-input span {
+    font-weight: 800;
+    font-size: 2.5em; /* Match font size of clock boxes */
+    color: #ffffff; /* Match font color of clock boxes */
+    line-height: 3.2em; /* Match line-height of clock boxes */
+    margin: 0 5px; /* Match margin of clock boxes */
+}
+
+.countdown-input button {
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #c1188e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: '8bit';
+    font-size: 30px;
+}
+
+.countdown-input button:hover {
+    background-color: #d47dbe;
+}
+
+.countdown-input img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+    from {
+        transform: translateY(0); /* Starting position */
+    }
+    to {
+        transform: translateY(-20px); /* Ending position */
+    }
+}

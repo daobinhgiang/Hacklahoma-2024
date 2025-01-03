@@ -1,0 +1,61 @@
+body {
+    background-image: url('background2.png'); /* Use background2.png as the background image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Arial', sans-serif; /* Set the font family */
+    color: #ffffff; /* Set the default text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 200px;
+    background-color: transparent; /* Add background color with some transparency */
+    padding: 20px; /* Add padding for spacing inside the container */
+    color: #3803fa; /* Set text color */
+}
+
+#countdown-input {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    font-size: 1em; /* Adjust font size */
+    border: 4px solid #9639f3; /* Purple */
+    background-color: white;
+    color: #c387ff;
+    outline: rgb(199, 166, 240);
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Set border-radius for rounded input */
+}
+
+#start-countdown-btn {
+    width: auto;
+    font: '8bit';
+    height: auto;
+    padding: 8px 16px;
+    font-size: 1em;
+    border: 4px solid #9639f3; /* Purple */
+    background-color: white;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 15px; /* Set border-radius for rounded button */
+}
+
+#start-countdown-btn:hover {
+    background-color: #663399; /* Purple */
+    color: #ffffff;
+}
+
+#clock {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #663399, 0 0 20px #663399, 0 0 40px #663399; /* Purple */
+}

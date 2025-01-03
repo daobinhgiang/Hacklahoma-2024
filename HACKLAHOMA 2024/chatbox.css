@@ -1,0 +1,59 @@
+@font-face {
+    font-family: '8bit';
+    src: url(font/8bit.ttf);
+}
+@font-face {
+    font-family: 'retro-font';
+    src: url(font/retro_font.TTF);
+}
+
+h1 {
+    font-family: '8bit';
+    font-size: 100px;
+    color: lightpink;
+    text-align: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'retro-font';
+}
+
+body {
+    height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-box {
+    width: 80%;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.message-input {
+    width: 60%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

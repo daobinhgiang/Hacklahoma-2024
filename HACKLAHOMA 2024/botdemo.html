@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Website</title>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <form id="message-form">
+            <input type="text" id="user-input" placeholder="Type your message">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("message-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const userInput = document.getElementById("user-input").value;
+            const chatMessages = document.getElementById("chat-messages");
+
+            // Display user message
+            displayMessage("You: " + userInput);
+
+            // Send user message to the OpenAI API for processing
+            // fetch("https://api.openai.com/v1/engines/text-davinci-003/completions", {
+            fetch("http://127.0.0.1:5000/api/chatbot", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "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", // Replace with your OpenAI API key
+                },
+                body: JSON.stringify({
+                    user_input: userInput,
+                    // max_tokens: 50 // Adjust max_tokens as needed
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display chatbot response
+                displayMessage("Chatbot: " + data.message);
+            })
+            .catch(error => console.error("Error:", error));
+
+            // Clear user input field
+            document.getElementById("user-input").value = "";
+        });
+
+        function displayMessage(message) {
+            const messageElement = document.createElement("div");
+            messageElement.textContent = message;
+            document.getElementById("chat-messages").appendChild(messageElement);
+        }
+    </script>
+</body>
+</html>

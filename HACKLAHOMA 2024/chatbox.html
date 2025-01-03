@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="chatbox.css" />
+    <link rel="stylesheet" href="dropdown.css" /> <!-- Same dropdown CSS -->
+</head>
+<body>
+   
+     <!-- Dropdown menu -->
+     <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="#">Login/Signup</a>
+            <a href="#" id="timer-option">Timer</a>
+            <a href="chatbox.html" target="_blank">RetroLearn</a>
+            </div>
+        </div>
+
+    <h1>Chat Box</h1>
+    <div id="chat-box" class="chat-box"></div>
+    <input type="text" id="message-input" class="message-input" placeholder="Type a message..." />
+    <button onclick="sendMessage()" class="send-button">Send</button>
+
+    <script src="chatbox.js"></script>
+    
+</body>
+</html>
